@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Escopo no JS</title>
+</head>
+<body>
+    
+<script>
+
+    var animal; // assim crio a variavel em escopo global, chamando ela dentro e fora do escopo
+    function sayAnimal () { // bloco
+        // var animal = 'cat';
+        animal = 'cat'; // mesmo atribuindo dentro da função o escopo fica global
+        console.log(animal); //chamando dentro do escopo tudo ok
+    }
+
+    sayAnimal();
+    console.log(animal); // chamando fora do bloco {} acima, ele nao consegue
+
+
+    var sound = 'meow';
+    const name = 'jake';
+</script>
+</body>
+</html>
