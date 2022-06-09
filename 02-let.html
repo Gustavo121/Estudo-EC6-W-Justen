@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,12 @@
 <body>
 
 <script>
-    var animal = 'cat'; // escopo global
+    var animal = 'cat'; // escopo global - var é global ao nao ser que esteja dentro de funções
+    // let animal = 'cat'; duas variaveis com mesmo nome não é possivel chamar
     console.log(animal);
     {
-        let animal = 'dog' // escopo do bloco com let
-        console.log(animal);
+        let animal = 'dog' // escopo do bloco com let - assim eu dentro do escopo eu consigo atribuir duas variaveis com mesmo nome
+        console.log(animal); // let - é usado para não ter perigo de outra variavel ser reescrita em outro parte do escopo
     }
     console.log(animal); // escopo global
 </script>

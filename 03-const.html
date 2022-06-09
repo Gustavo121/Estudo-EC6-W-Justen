@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    
+    const secretNumber = 28; // é uma constante, no momento que criei eu nao posso modifica-la
+
+    // const nao é um objeto imutavel, a variavel em si eu nao consigo modifica-la, porem as propriedades do objeto eu consigo
+    //ex.
+
+    const will = {
+        name: 'William',
+        age: 53
+    };
+
+    Object.freeze(will);  // utilizando dessa forma a const se torna imutavel, pois congelou todas as propriedades de will e nao consigo reescrever
+    // console.log(will);
+
+    will.age = 26;          // asssim eu modifico a propriedade age e chamo abaixo.
+
+    console.log(will);
+</script>
+</body>
+</html>
