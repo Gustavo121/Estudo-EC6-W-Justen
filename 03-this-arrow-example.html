@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03- This no Arrow Function</title>
+</head>
+<body>
+
+    <button id="btn">Make my sandwich</button>
+    
+</body>
+
+<script>
+    const sandwich = {
+        bread: 'white',
+        cheese: 'cheddar',
+
+        prepare: function() {
+            return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese!`;
+        },
+
+        make: function() {
+            window.setTimeout(() => {
+                console.log( this.prepare() );  // this é referente ao objeto que esta interagindo, no caso o prepare
+            }, 500);
+        }
+    };
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function() { sandwich.make() })
+
+
+    // a arrow function pode ser usada em casos com varias funções para utilizar metodos do objeto de cima da função
+</script>
+</html>

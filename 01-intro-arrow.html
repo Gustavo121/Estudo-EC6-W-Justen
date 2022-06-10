@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Intro Arrow Function</title>
+</head>
+<body>
+
+<script>
+    const ireland = ['Dublin', 'Galway', 'Cork']
+
+    // function
+    const love = ireland.map(function(name) {  //.map = retorna um novo array usando um array anterior
+        return `I love ${name}!`;
+    })
+
+
+    // arrow function
+    const loveArrow = ireland.map((name) => {
+        return `I love ${name}!`;
+    })
+
+
+    // arrow function  - sem os () no parametro Name
+    const loveArrowSingle = ireland.map(name => {
+        return `I love ${name}!`;
+    })
+
+
+    // arrow function  - function em uma linha 
+    const loveArrowOneLine = ireland.map(name => `I love ${name}!`);
+    
+    console.log(loveArrowOneLine)
+
+
+    // encadeamento de metodos .filder .map
+    const loveChain = ireland
+                        .filter(name => name === 'Dublin') // filtra = se tiver Dublin ele vai chamar
+                        .map(name => `I love ${name}!`);   // junta com a filtragem de cima retornando tudo
+                        
+    console.log(loveChain);
+</script>
+</body>
+</html>
