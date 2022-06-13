@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Uses Template Literals</title>
+</head>
+<body>
+</body>
+
+<script>
+// Template literals ajuda para juntar strings e variaveis de uma forma bem mais facil e curta
+
+    const ireland = {
+        live: 'Dublin',
+        love: 'Galway'
+    };
+
+    const text = 'Eu moro em ' + ireland.live + ' eu sou apaixonado por ' + ireland.love+'!';
+
+    const newText = ` Eu moro em ${ireland.live} e sou apaixonado por ${ireland.love}!`; // usando template
+
+const fruits = 'Bannana'
+                + '\n'
+                + 'orange'   // moro ruim de escrita
+                + '\n'
+                + 'apple';
+
+const newFruits =
+`Bannana
+orange
+apple`;
+
+
+console.log(newFruits)
+</script>
+</html>
