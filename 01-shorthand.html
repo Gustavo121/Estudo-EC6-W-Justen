@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Shorthand Properties</title>
+</head>
+<body>    
+</body>
+
+<script>
+    let firstName = 'Gustavo';
+    let surname = 'Gouvêa';
+    let age  = 30;
+
+/*
+    SEM SHORTHAND!
+
+    const person =  {
+        firstName: firstName,
+        surname: surname,
+        age: age
+    }
+*/
+    //COM SHORTHAND
+    const person =  {
+        firstName,
+        surname,
+        age,
+
+        hello(){       // nao preciso colocar - hello: function() {}
+            console.log('Hello!')
+        }
+    }
+
+    console.log(person)
+</script>
+</html>

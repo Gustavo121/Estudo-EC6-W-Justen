@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Default Parameters</title>
+</head>
+<body>    
+</body>
+
+<script>
+    /*
+    function hello( name, surname ) {
+        name = name || 'Gustavo';
+        surname = surname || 'Gouvêa';
+
+        console.log(`Hello ${name} ${surname}! How are you?`)
+    }
+
+    hello();
+    */
+
+    // COM DEFAULT PARAMETERS
+
+    function hello( name = 'Gustavo', surname = 'Gouvêa' ) {
+        console.log(`Hello ${name} ${surname}! How are you?`)
+    }
+
+    hello();    // se ele nao receber nada ele retorna o default estipulado acima
+
+    hello('William', 'Justen'); // recebendo retorna um outro nome colocado
+</script>
+</html>
