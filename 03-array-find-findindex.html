@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Array.find e Array.findIndex</title>
+</head>
+<body>    
+</body>
+
+<script>
+    const data = [
+        {
+            name: 'Gustavo',
+            age: 30,
+            city: 'Dublin'
+        },
+        {
+            name: 'Marisa',
+            age: 61,
+            city: 'Cologne'
+        }
+    ];
+        // pode ser trabalhado com arrays dentro de uma API por exemplo
+
+    const gu = data.find(person => person.name === 'Gustavo'); // mostra todo conteudo do objeto
+    const guIndex = data.findIndex(person => person.name === 'Gustavo'); // mostra a posição no array
+    console.log(guIndex);
+
+/*
+    const sampleArray = [4, -5, 0] // x = varoles do array
+    const underZero = sampleArray.find(x => x < 0); // vai chamar um valor de cada vez e para no primeiro que for menor que 0
+    const underZeroIndex = sampleArray.findIndex(x => x < 0) // vai mostrar a primeira posição do array menor que 0
+    console.log(underZero);
+    console.log(underZeroIndex);
+*/
+</script>
+</html>
