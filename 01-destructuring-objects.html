@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Destructuring Objects</title>
+</head>
+<body>    
+</body>
+
+<script>
+    var data = {
+        name: 'Gustavo',
+        surname: 'Gouvêa',
+        age: 30,
+        blog: 'https://gustavogouvea.com.br',
+        social: {
+            twitter: '@Gustavo_Gouvea',
+            facebook: '/gustgouvea'
+        }
+    };
+
+    // se eu quiser imprimir os objetos, tenho que colocar dentro de variaveis
+/*
+    MODO RUIM DE ESCRITA!
+
+    const name = data.name;
+    const surname = data.surname;
+    const twitter = data.social.twitter;
+
+    console.log(name);
+    console.log(surname);
+    console.log(twitter);
+*/ 
+
+
+
+// DESTRUCTURING - melhor modo de escrita
+
+const { name, surname } = data;
+console.log(name);
+console.log(surname);
+
+const { facebook, twitter } = data.social;
+console.log(facebook);
+console.log(twitter);
+
+
+// posso simplificar os nomes
+
+const { facebook: fb} = data.social;
+
+console.log(fb);
+
+
+// colocando uma declarão que nao existe no inicio, se caso existir algo declarado você nao pode reescrever
+
+const { city = 'Dublin' } = data;
+
+console.log(city);
+
+
+
+</script>
+</html>
