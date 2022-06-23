@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Spread Operator Intro</title>
+</head>
+<body>    
+</body>
+
+<script>
+    // Spread Operator - serve para pega elementos que são interaveis ex.array, string e dividir ele em pequenas partes
+    //ex.
+    /*
+    console.log([...'gustavo']); // string, transformando ela em um array
+
+    let front = ['react', 'vue', 'angular'];
+    let back = ['python', 'ruby', 'nodejs'];
+
+    console.log(...front); // array, separando parte por parte
+    */
+
+
+
+
+
+
+    //ex. juntar 2 arrays em 1 só
+
+    //let front = ['react', 'vue', 'angular'];
+    //let back = ['python', 'ruby', 'nodejs'];
+
+    //modo antigo para juntar 2 arrays
+    /*
+    let fullStack = front.concat(back);
+
+    console.log(fullStack);
+    */
+
+
+
+
+    //modo antigo como colocar mais 1 elemento dentro do array
+    /*
+    let front = ['react', 'vue', 'angular'];
+    let back = ['python', 'ruby', 'nodejs'];
+
+    let fullStack = [];
+    fullStack = fullStack.concat(front);
+    fullStack.push('RxJS');
+    fullStack = fullStack.concat(back);
+    
+    console.log(fullStack);
+    */
+
+
+
+
+    // modo de melhor escrita! Muito utilizado para separar string, junção de arrays!
+
+    let front = ['react', 'vue', 'angular'];
+    let back = ['python', 'ruby', 'nodejs'];
+
+    let fullStack = [...front, 'RxJS', ...back];
+
+    console.log(fullStack);
+    
+</script>
+</html>
