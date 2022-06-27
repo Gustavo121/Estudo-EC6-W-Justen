@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Promises Intro</title>
+</head>
+<body>    
+</body>
+
+<script>
+    // Promise é um objeto com uma ação que ainda não foi finalizada, porem vai ser finalizada de alguma forma no futuro
+    // É importante para tratar metodos assincronos, para evitar callbackhell(callback dentro de callback)
+
+/*
+    var defer = new Promise((resolve, reject) => { //promises recebe dois parametro - Resolve: resolve sua ação e Reject - rejeita sua ação 
+        if(true) {  //dependendo da resposta ele vai ir para then(true) cath(false)
+            resolve('Hello! It works');
+        } else {
+            reject('Error!');
+        }
+    });
+    
+    defer       //pode encadear
+        .then((data) => console.log(data))    // then = pegue o data e faça alguma coisa.
+        .catch((err) => console.log(err)); // cath = se a resposta for false, ele chama o erro.
+*/
+
+    var defer = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(true) {
+                resolve('Hello! It works!');
+            } else {
+                reject('Error!');
+            }
+        }, 2000);
+    });
+
+    defer
+        .then((data) => {
+            console.log(data);
+            return 'foo';
+        })
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+
+</script>
+</html>

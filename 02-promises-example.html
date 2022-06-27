@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Promises Example</title>
+</head>
+<body>    
+</body>
+
+<script>
+    var posts = fetch('https://willianjusten.com.br/search.json');
+
+    // pendind - esta sendo resolvida, esta acontecendo
+    // resolved - resolveu tudo que precisava e retornou algo
+    // rejected - quando tem algum problema, e ela nao se resolveu
+
+    posts
+        .then(data => data.json())
+        .then(data => data.map(post => {
+            console.log(post.title);  // pega todos o titulos
+        }))
+        .catch(err => console.error(err));  // tratando o erro
+</script>
+</html>

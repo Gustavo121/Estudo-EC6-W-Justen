@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Promises Múltiplas</title>
+</head>
+<body>    
+</body>
+
+<script>
+    const currency = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ currency: 'euro', value: 3.50});
+        }, 2000);
+    });
+
+    const countries = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['Ireland', 'England', 'Scotland']);
+        }, 600);
+    });
+
+    Promise
+        .all([currency, countries]) // vai pega todas as promises e apos todas serem resolvidas ela realiza todas
+        .then(responses => {        // ele aplica a ação
+            console.log(responses);
+        })
+
+
+    Promise
+        .race([currency, countries]) // quando a primeira promise for resolvida, ignora toda o resto
+        .then(responses => {         
+            console.log(responses);
+        })
+
+
+        //interessante quando trabalha fazendo requisições em varios lugares ao mesmo tempo.
+</script>
+</html>
