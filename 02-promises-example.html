@@ -18,6 +18,7 @@
 
     posts
         .then(data => data.json())
+        //.then(data => console.log(data)); assim ele joga todo conteudo disponivel
         .then(data => data.map(post => {
             console.log(post.title);  // pega todos o titulos
         }))

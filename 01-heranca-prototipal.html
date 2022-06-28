@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Revisão Herança Prototipal</title>
+</head>
+<body>    
+</body>
+
+<script>
+    function Animal(kind, sound) {  //função construtora seria como nossa classe, onde conseguimos criar objetos 
+        this.kind = kind;                // objeto this dentro dessa função tem uma propriedade kind que é a mesma que ele recebe
+        this.sound = sound;
+    }
+
+    Animal.prototype.hello = function() {             // foi feito um metodo!
+        console.log(`${this.sound} I'am a ${this.kind}!`); // desse metodo podemos uma por varios objetos da classe Animal.
+    }
+
+    const dog = new Animal('dog', 'auau'); //objeto da classe animal
+    const cat = new Animal('cat', 'meow');
+</script>
+</html>

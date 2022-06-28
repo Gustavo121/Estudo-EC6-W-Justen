@@ -30,7 +30,7 @@
 
 
     Promise
-        .race([currency, countries]) // quando a primeira promise for resolvida, ignora toda o resto
+        .race([currency, countries]) // quando a primeira promise for resolvida, ignora toda o resto e ja manda
         .then(responses => {         
             console.log(responses);
         })
