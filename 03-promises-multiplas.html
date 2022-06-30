@@ -22,7 +22,7 @@
         }, 600);
     });
 
-    Promise
+    Promise  //construtor
         .all([currency, countries]) // vai pega todas as promises e apos todas serem resolvidas ela realiza todas
         .then(responses => {        // ele aplica a ação
             console.log(responses);
@@ -34,7 +34,6 @@
         .then(responses => {         
             console.log(responses);
         })
-
 
         //interessante quando trabalha fazendo requisições em varios lugares ao mesmo tempo.
 </script>

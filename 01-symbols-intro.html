@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01- Symbols Intro</title>
+</head>
+<body>    
+</body>
+
+<script>
+    // Symbol é um tipo primitivo igual array, string...
+    // duas caracteristicas.   Symbol é imutavel;   Symbol é unico;
+    /*
+    let foo = Symbol('name'); // mesmo contendo o mesmo valor, ele sao unicos! como se casa um tivesse uma rash(dados internos diferentes)
+    let bar = Symbol('name');
+
+    console.log(foo == bar)  // as duas situações daria false!
+    console.log(foo === bar);
+    */
+
+    // criando Symbol
+
+    let foo = Symbol('name'); //cria uma variavel e coloca dentro de symbol uma descrição(name no ex.)
+
+    console.log(foo);
+
+
+
+    // ex. colocando Symbols em um object
+
+    let obj = {
+        [Symbol('name')]: 'Gustavo',
+        [Symbol('age')]: 26,
+        city: 'Dublin'
+    };
+
+    // console.log(Object.keys(obj));  assim ele não vai mostrar os Symbols, pois entende que apenas city que é uma chave normal seja aceitavel. 
+    
+    //Para chamar os symbols
+    const symbols = Object.getOwnPropertySymbols(obj);
+
+    const data = symbols.map(sym => obj[sym]);
+    console.log(data);
+
+
+    // Conclusão symbols é bom ser trabalhado com propriedades sem correr o risco de ter conflitos ou sobre escrever ela.
+</script>
+</html>

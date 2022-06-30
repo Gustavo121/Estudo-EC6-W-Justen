@@ -10,11 +10,15 @@
 </body>
 
 <script>
+
+    //class
     function Animal(kind, sound) {  //função construtora seria como nossa classe, onde conseguimos criar objetos 
+        // constructor
         this.kind = kind;                // objeto this dentro dessa função tem uma propriedade kind que é a mesma que ele recebe
         this.sound = sound;
     }
 
+    //method
     Animal.prototype.hello = function() {             // foi feito um metodo!
         console.log(`${this.sound} I'am a ${this.kind}!`); // desse metodo podemos uma por varios objetos da classe Animal.
     }

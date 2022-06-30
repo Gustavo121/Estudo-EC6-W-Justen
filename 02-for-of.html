@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - for ...of</title>
+</head>
+<body>    
+</body>
+<script>
+    // iterators
+    // iterable
+ 
+    // são usados para interar cada informação dada
+
+    //ex. 
+    // [1, 2, 3, 4, 5, 6] // iterables elementos que eu posso iterar, passar por cada um
+                        // iterators é o que eu posso fazer para passar de 1 para o 2 e assim vai.
+
+    var txt = 'Ireland'; // iterable
+    var it = txt[Symbol.iterator](); // iterator - ele vai ter o poder de passa item a item do de cima
+    /*
+    console.log( it.next() ); // vai mostrar letra por letra 
+    console.log( it.next() );
+    console.log( it.next() );
+    console.log( it.next() );
+    console.log( it.next() );
+    console.log( it.next() );
+    console.log( it.next() ); // ate da undefined e done:true
+    */
+
+    for ( letter of txt ) {  // assim eu consigo criar um loop para chega ate um ponto
+        console.log(letter);
+        if (letter === 'a') break;
+    }
+
+
+</script>
+</html>

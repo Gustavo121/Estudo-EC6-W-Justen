@@ -22,6 +22,9 @@
         .then(data => data.map(post => {
             console.log(post.title);  // pega todos o titulos
         }))
+       /* .then(data => {      // exemplo tratando um erro
+            throw new Error('ixi deu erro');
+        })*/
         .catch(err => console.error(err));  // tratando o erro
 </script>
 </html>
