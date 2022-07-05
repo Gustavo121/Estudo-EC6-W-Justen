@@ -14,17 +14,30 @@
     function ajax(url) {
         fetch(url)
             .then(data => data.json())
-            .then(data => console.log(data));
+            .then(data => dados.next(data));
     }
 
     // https://willianjusten.com.br/search.json
     // https://api.github.com/users/willianjusten
 
-    function ajaxGen() {
+    function* ajaxGen() {
         console.log('Buscando posts...');
-        ajax('https://willianjusten.com.br/search.json');
+        const posts = yield ajax('https://willianjusten.com.br/search.json');
+        console.log(posts);
+    
+        console.log('Buscando dados github...')
+        const github = yield ajax('https://api.github.com/users/willianjusten');
+        console.log(github);
+
+        console.log('Buscando dados github 2...')
+        const github2 = yield ajax('https://api.github.com/users/willianjusten');
+        console.log(github2);
     }
 
-    
+    const dados = ajaxGen();
+    dados.next();
+
+
+    // generators pode ser interessante para trabalhar com fluxos
 </script>
 </html>
