@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Sets Intro</title>
+</head>
+<body>    
+</body>
+
+<script>
+    // Set - é um objeto que permite guardar valores unicos, tipo primitivo string inteiro.... ou seja ele um objeto.
+    // ele é bem parecido com um array porém é dentro de {}
+    // e suas propriedades sao diferentes, como size, entries...
+
+    let mySet = new Set(['Gustavo', 'Marisa', 'Julia']);
+
+    mySet.add('Pedro'); // para adicionar mais um nome. Não consigo repetir o comando com nome ja existente
+
+    mySet.delete('Gustavo'); // deletar o nome
+
+    console.log(mySet.has('Gustavo')); // se tem o nome dentro de set
+    console.log(mySet.has('Marisa'));
+
+    console.log(mySet[1]); // assim ele da undefined, pois nao consegue chamar por indice
+
+
+
+    // mySet.values();  ele é um interator assim podendo trabalhar como interator
+
+
+    let it = mySet.values();
+
+    // console.log(it.next()); posso usar para percorrer o interator
+
+
+    for (name of it ) {
+        console.log(name); // assim ele mostra todos os nomes.
+    }
+
+</script>
+</html>

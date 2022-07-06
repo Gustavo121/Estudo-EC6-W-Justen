@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Weakset Intro</title>
+</head>
+<body>    
+</body>
+
+<script>
+    let obj1 = {
+        name: 'Gustavo',
+        age: 30
+    };
+
+    let obj2 = {
+        name: 'Julia',
+        age: 35
+    };
+
+        //  WeakSet so aceita objetos
+    let ws = new WeakSet([obj1, obj2]); // pode definir tipos primitivos, diferente de Set (que aceita string numeros...)
+
+    // ws          para ver os objetos
+
+    // ws.has(obj1);
+    // ws.has(obj2);
+    // ws.add ({type: 'obj'});
+    //ws.delete(obj2);
+
+
+
+    //Não consigo pois nao é um iterator
+
+    // ws.clear();
+
+    // ws.values();
+
+    /* for (obj of ws) {
+        console.log(obj);
+    }
+    */
+
+
+   // WeakSet é parecido com Set tem um API parecida com algumas limitações, pois so recebe objetos e nao permite interação
+   // serve para guardar apenas objetos, legal para ter objetos unicos.
+</script>
+</html>
