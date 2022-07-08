@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padstart and Padend</title>
+</head>
+<body>    
+</body>
+
+<script>
+    //String.prototype.padStart/padEnd
+    // preenche com caracter, apartir da quantidade que a gente passa
+    
+    //padStart preenche no começo!!
+    // ex.
+    console.log(''.padStart(5, 'Hi'));
+    // retorno: HiHiH
+
+    //ex2.
+    console.log('abc'.padStart(10, 'Hi'));
+    // retorno: HiHiHiHabc
+
+    //ex3. cfp... a pessoa coloca o cpf e o resto preenche de 0
+    console.log('abc'.padStart(11, '0'));
+
+
+
+
+    
+    //padEnd preenche no final!!
+    // padEnd(tamanhoDesejado, textoParaAdicionar)
+    //ex.
+    console.log('abc'.padEnd(11, '0'));
+</script>
+</html>

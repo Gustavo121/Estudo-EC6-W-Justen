@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - WeakMaps Intro</title>
+</head>
+<body>       
+</body>
+
+<script>
+
+    // são definições fracas, unicas porem fracas
+
+    let obj1 = {
+        name: 'Gustavo',
+        age: 30
+    };
+
+    let obj2 = {
+        name: 'Marisa',
+        age: 61
+    };
+
+
+    let wm = new WeakMap();  // igual o weakset. WeakMap so aceita objetos!
+
+    wm.set(obj1, 'Info do Gustavo');
+    wm.set(obj2, 'Info da Marisa');
+</script>
+</html>
