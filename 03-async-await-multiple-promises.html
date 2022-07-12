@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Async/Await Multiple Promisses</title>
+</head>
+
+<body>    
+</body>
+
+<script>
+    //Exemplo se tiver mais de uma promises
+/*
+    async function getUsers() { 
+        const gustavo = fetch('https://api.github.com/Gustavo121').then(r => r.json()); // colocando o await antes do fetch, ele vai passa pela primeira resolver só depois vai para a segunda.
+        const flavio = fetch('https://api.github.com/Flavio27').then(r => r.json());    // caso queira que resolva tudo no mesmo tempo use Promise.all() ex. abaixo
+
+        const promises = await Promise.all([gustavo, flavio]);
+        console.log(promises);
+    }
+
+    getUsers();
+*/
+
+
+
+
+// ex. simplificando o codigo acima!
+
+    async function getUsers(users) { 
+        const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json())); // colocando o await antes do fetch, ele vai passa pela primeira resolver só depois vai para a segunda.
+
+        const people = await Promise.all(promises);
+        console.log(people.map(p => p.company)); // aqui pode colocar a informção que voce deseja retornar
+    }
+
+    getUsers(['gustavo', 'flavio']); // aqui quantas api voce deseja retonar
+
+</script>
+
+</html>
