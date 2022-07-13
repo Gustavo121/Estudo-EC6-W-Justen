@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.entries</title>
+</head>
+<body>
+    <script>
+        const animals = {
+            camel: 3,
+            iiama: 2,
+            alpaca: 5,
+        };
+
+        // console.log(Object.entries(animals)); // mostra o array com os 3 animais, com chaves, animais e valor
+
+        const animalsMap = new Map(Object.entries(animals));
+
+        console.log(Object.keys(animals)); // ele passa somente as chaves, mas o valor não
+
+        console.log(animalsMap.size) // mostra a quatidade de animais no array
+        console.log(animalsMap.has('iiama')); // verifico se tem o animal no array pelo nome e retorna true
+        console.log(animalsMap.has('lion')); // se caso na existir ele retorna false
+        console.log(animalsMap.get('alpaca')); // mostra o valor do animal no array, no caso é 5
+
+    </script>
+</body>
+</html>

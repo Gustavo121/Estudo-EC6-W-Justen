@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailing commas</title>
+</head>
+<body>
+    <script>
+        // no final de array, objetos, e functions... devs colocam , sobrando para se caso atribuir algo a mais por outra pessoa, não da problema de sintax
+        // nao da erro no codigo e ate mesmo evita error futuros por falta de virgula
+        const arr = [
+            1,
+            2,
+            3,
+            3, // essa virgula
+        ];
+
+        const obj = {
+            name: 'Gustavo',
+            age: 28,
+            country: 'Brasil', // essa virgula
+
+        }
+
+        function sum (a, b,) {    // a virgula no b,
+            return a + b;
+        }
+    </script>
+</body>
+</html>
